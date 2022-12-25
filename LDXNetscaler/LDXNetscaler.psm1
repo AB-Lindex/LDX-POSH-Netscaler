@@ -34,7 +34,8 @@ function Get-NSEnvironment {
         $Environment
     )
 
-    $NS = Get-Content -Raw -Path C:\Scripts\POSH-LetsEncrypt\netscaler.json | ConvertFrom-Json
+    $JSONPath = Join-Path -Path (Split-Path (get-module -name LDXNetscaler).path) -ChildPath "netscaler.json"
+    $NS = Get-Content -Raw -Path $JSONPath | ConvertFrom-Json
     return ($NS.netscaler | Where-Object {$_.Environment -eq $Environment}).NSApi
 }
 
