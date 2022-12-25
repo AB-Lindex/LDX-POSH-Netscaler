@@ -1,0 +1,20 @@
+﻿{
+  "netscaler": [
+    {
+      "Environment": "QA",
+      "NSApi": "nitroapiqa.lindex.local"
+    },
+    {
+      "Environment": "PROD",
+      "NSApi": "nitroapi.lindex.local"
+     },
+     {
+      "Environment": "QA-AZ",
+      "NSApi": "nitroapiqa.lindex.local"
+    },
+    {
+      "Environment": "PROD-AZ",
+      "NSApi": "nitroapi.lindex.local"
+     }
+  ]
+}
